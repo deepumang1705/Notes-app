@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   onSubmit() {
     this._enrollmentService.enroll(this.userModel)
       .subscribe(
-        data => {console.log('Success!', data); this.userModel = new User('',''); this.ngOnInit},
+        data => {console.log('Success!', data); this.userModel = new User('',''); this.ngOnInit()},
         error => console.error('Error!', error)
       )
   }

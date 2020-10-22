@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { Injectable } from '@angular/core';
 import {  HttpClient } from '@angular/common/http'
 import { User } from './user'
@@ -7,7 +8,7 @@ import { User } from './user'
 })
 export class EnrollmentService {
 
-  _url = 'https://umang-note-app.herokuapp.com/notes';
+  _url = environment.baseUrl + '/notes';
   constructor(private _http: HttpClient) { }
 
   enroll(user: User) {
